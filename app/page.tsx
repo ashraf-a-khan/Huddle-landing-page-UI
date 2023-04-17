@@ -30,13 +30,13 @@ export default function Home() {
                         <div className="pt-40 pl-24 basis-1/2">
                             <Image src={illustration} alt="illustration" />
                         </div>
-                        <div className="pt-52 pl-24 pr-12 basis-1/2">
+                        <div className="pt-52 pl-24 pr-24 basis-1/2">
                             <h1 className={`${poppins.className} "leading-10"`}>
                                 Build The Community
                                 <br />
                                 Your Fans Will Love
                             </h1>
-                            <div className={open_sans.className}>
+                            <div className={`${open_sans.className} "text-sm"`}>
                                 Huddle re-imagines the way we build communities.
                                 You have a voice, but so does your audience.
                                 Create connections with your users as you engage
@@ -49,7 +49,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-row">
                         <div className="basis-1/2"></div>
-                        <div className="flex flex-row pr-12 justify-end basis-1/2">
+                        <div className="flex flex-row pt-12 pr-24 justify-end basis-1/2">
                             <FontAwesomeIcon
                                 icon={faFacebook}
                                 className="text-md mr-2 rounded-full border border-gray-300 p-1 w-12 h-12 flex items-center justify-center"
