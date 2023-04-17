@@ -4,6 +4,10 @@ import { Poppins } from "next/font/google";
 import illustration from "../public/images/illustration-mockups.svg";
 import bgDesktop from "../public/images/bg-desktop.svg";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,25 +18,19 @@ const open_sans = Open_Sans({ weight: ["400"], subsets: ["latin"] });
 export default function Home() {
     return (
         <main>
-            {/* <div className="bg-scroll bg-[url('/images/bg-desktop.svg')] h-[972px]"></div> */}
             <div>
                 <div
-                    //
                     className="absolute -z-10 min-h-screen bg-gradient-to-r from-violet-500 to-purple-500 bg-cover bg-no-repeat bg-fixed bg-center"
                     style={{
                         backgroundImage: "url('/images/bg-desktop.svg')",
                         backgroundColor: "#674baf",
                     }}
-                    // style={{
-                    //     width: "100%",
-                    //     height: "100%",
-                    // }}
                 >
                     <div className="flex flex-row">
                         <div className="pt-40 pl-24 basis-1/2">
                             <Image src={illustration} alt="illustration" />
                         </div>
-                        <div className="pt-52 pl-24 basis-1/2">
+                        <div className="pt-52 pl-24 pr-12 basis-1/2">
                             <h1 className={`${poppins.className} "leading-10"`}>
                                 Build The Community
                                 <br />
@@ -47,6 +45,23 @@ export default function Home() {
                             <button className="shadow-xl mt-8 bg-white text-violet-400 py-3 px-12 rounded-full">
                                 Register
                             </button>
+                        </div>
+                    </div>
+                    <div className="flex flex-row">
+                        <div className="basis-1/2"></div>
+                        <div className="flex flex-row pr-12 justify-end basis-1/2">
+                            <FontAwesomeIcon
+                                icon={faFacebook}
+                                className="text-md mr-2 rounded-full border border-gray-300 p-1 w-12 h-12 flex items-center justify-center"
+                            />
+                            <FontAwesomeIcon
+                                icon={faTwitter}
+                                className="text-md mr-2 rounded-full border border-gray-300 p-1 w-12 h-12 flex items-center justify-center"
+                            />
+                            <FontAwesomeIcon
+                                icon={faInstagram}
+                                className="text-md rounded-full border border-gray-300 p-1 w-12 h-12 flex items-center justify-center"
+                            />
                         </div>
                     </div>
                 </div>
